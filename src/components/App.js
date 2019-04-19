@@ -4,9 +4,12 @@ import React from 'react';
 import SongList from './SongList/SongList';
 import SongDetail from './SongDetail/SongDetail';
 
+/* STYLESHEET */
+import "./App.css";
+
 const App = () => {
     return (
-        <div className="ui container grid" >
+        <div className="ui container grid margin-top" >
             <div className="ui row" >
                 <div className="column eight wide" >
                     <SongList />
