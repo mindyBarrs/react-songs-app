@@ -1,3 +1,6 @@
+/* LIBRARIES */
+import { combineReducers } from 'redux';
+
 
 // STATIC ARRAY OF SONGS
 const songReducer = () => {
@@ -25,10 +28,15 @@ const songReducer = () => {
     ]
 };
 
-const SelectedSongReducer = (selectdSong = null, action) => {
+const selectedSongReducer = (selectdSong = null, action) => {
     if(action.type === 'SONG_SELECTED'){
         return action.payload;
     }
 
     return selectdSong;
-}
+};
+
+export default combineReducers({
+    songs: songReducer,
+    selectedSong: selectedSongReducer
+});
