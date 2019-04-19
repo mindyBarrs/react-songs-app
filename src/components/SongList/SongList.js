@@ -1,3 +1,4 @@
+/* LIBRARIES */
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -37,8 +38,6 @@ class SongList extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
-
     return { 
         songs: state.songs 
     };
